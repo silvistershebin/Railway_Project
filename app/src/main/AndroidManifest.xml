@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ComplaintActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".VerifyActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity
+            android:name=".ComplaintActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".VerifyActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
