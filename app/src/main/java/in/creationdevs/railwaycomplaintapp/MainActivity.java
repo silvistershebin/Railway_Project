@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.phone_activity);
+
+
+
         editTextMobile = findViewById(R.id.edittext_mobile);
         buttonSubmit = findViewById(R.id.button_submit);
         textviewInfo = findViewById(R.id.textview_info);
