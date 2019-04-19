@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "351671713039",
+    "firebase_url": "https://railwayproject-66c7a.firebaseio.com",
+    "project_id": "railwayproject-66c7a",
+    "storage_bucket": "railwayproject-66c7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351671713039:android:f4556170d822dca6",
+        "android_client_info": {
+          "package_name": "in.creationdevs.railwaycomplaintapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351671713039-v3159lbg36at6fn4k6u5ks0ddoag6g54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.creationdevs.railwaycomplaintapp",
+            "certificate_hash": "566832d653e3279ffe76092de4fae858e7ba3d46"
+          }
+        },
+        {
+          "client_id": "351671713039-j5rp85rkr4vhhltma80sfsq109kvr5jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx2UJUEL-AfBnoR9Nr33l42AU-pGwmI8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351671713039-j5rp85rkr4vhhltma80sfsq109kvr5jt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
