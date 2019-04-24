@@ -23,8 +23,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".VerifyActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
+        <activity android:name=".GetPhoneActivity" />
+        <activity android:name=".OtpActivity" />
     </application>
 
 </manifest>
