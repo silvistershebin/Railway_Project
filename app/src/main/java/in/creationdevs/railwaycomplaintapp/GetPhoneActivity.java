@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Main2Activity extends AppCompatActivity {
+public class GetPhoneActivity extends AppCompatActivity {
 
 
     private EditText editTextMobile;
@@ -15,7 +15,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_getphone);
 
         editTextMobile = findViewById(R.id.editTextMobile);
         button = findViewById(R.id.buttonContinue);
@@ -31,10 +31,16 @@ public class Main2Activity extends AppCompatActivity {
                     return;
                 }
 
-                Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
+                Intent intent = new Intent(GetPhoneActivity.this, OtpActivity.class);
                 intent.putExtra("mobile", mobile);
                 startActivity(intent);
             }
         });
+    }
+
+    public void bypass(View view)
+    {
+        Intent intent = new Intent(GetPhoneActivity.this,RegisterActivity.class);
+        startActivity(intent);
     }
 }

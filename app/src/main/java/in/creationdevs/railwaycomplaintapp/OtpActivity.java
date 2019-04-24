@@ -5,10 +5,8 @@ import android.os.Bundle;
 
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,7 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main3Activity extends AppCompatActivity {
+public class OtpActivity extends AppCompatActivity {
 
     //These are the objects needed
     //It is the verification id that will be sent to the user
@@ -41,7 +39,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_otp);
 
         //initializing objects
         mAuth = FirebaseAuth.getInstance();
@@ -107,7 +105,7 @@ public class Main3Activity extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(Main3Activity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(OtpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -130,12 +128,12 @@ public class Main3Activity extends AppCompatActivity {
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(Main3Activity.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(OtpActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
-                            Intent intent = new Intent(Main3Activity.this, RegisterActivity.class);
+                            Intent intent = new Intent(OtpActivity.this, RegisterActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
 
@@ -144,7 +142,7 @@ public class Main3Activity extends AppCompatActivity {
                             //verification unsuccessful.. display an error message
 
                             String message = "Somthing is wrong, we will fix it soon...";
-                            Toast.makeText(Main3Activity.this, message, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(OtpActivity.this, message, Toast.LENGTH_SHORT).show();
 
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 message = "Invalid code entered...";
